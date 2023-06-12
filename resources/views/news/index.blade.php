@@ -11,7 +11,7 @@
 <body>
     <h1>Привет</h1>
     <h1>это агрегатор новостей</h1>
-    <a href="<?= route('categories.list') ?>">перейти к новостям</a>
+    <a href="{{route('categories.list')}}">перейти к новостям</a>
 </body>
 
 </html>
