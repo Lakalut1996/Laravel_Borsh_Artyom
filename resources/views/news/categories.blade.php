@@ -11,11 +11,11 @@
 <body>
     <h1>Выбор категории новостей</h1>
 
-    <?php foreach ($categoriesList as $key) : ?>
-        <div><?= $key ?></div>
+    @foreach ($categoriesList as $key)
+        <div>{{ $key }}</div>
         <a href="<?= route('news.list', ['categories' => $key]) ?>">перейти к <?= $key ?></a>
         <hr>
-    <?php endforeach; ?>
+    @endforeach
 </body>
 
 </html>

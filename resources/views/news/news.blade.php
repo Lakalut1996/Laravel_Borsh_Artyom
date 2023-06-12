@@ -18,15 +18,15 @@
             echo "</pre>";
             ?> -->
 
-    <?php foreach ($newsList as $key => $value) : ?>
-        <h1><?= $value['header'] ?></h1>
-        <div>Автор новости: <?= $value['autor'] ?></div>
-        <div><?= $value['txt'] ?></div>
-        <a href="/categories">Открыть новость(не успел доделать)</a>
-        <hr>
-    <?php endforeach; ?>
+    @foreach ($newsList as $key => $value)
+    <h1>{{$value['header']}}</h1>
+    <div>Автор новости: {{$value['autor']}}</div>
+    <div>{{$value['txt']}}</div>
+    <a href="/categories">Открыть новость(не успел доделать)</a>
+    <hr>
+    @endforeach
 
-    <a href="<?= route('categories.list') ?>">Вернуться к категориям</a>
+    <a href="{{route('categories.list')}}">Вернуться к категориям</a>
 
 </body>
 
