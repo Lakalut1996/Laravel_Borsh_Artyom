@@ -13,7 +13,7 @@
 
     @foreach ($categoriesList as $key)
         <div>{{ $key }}</div>
-        <a href="<?= route('news.list', ['categories' => $key]) ?>">перейти к <?= $key ?></a>
+        <a href="{{route('news.list', ['categories' => $key])}}">перейти к {{$key}}</a>
         <hr>
     @endforeach
 </body>
