@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('news/main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@section('title')
+    @parent NewesSite
+@endsection
 
-<body>
+@section('content')
     <h1>Выбор категории новостей</h1>
 
     @foreach ($categoriesList as $key)
         <div>{{ $key }}</div>
-        <a href="{{route('news.list', ['categories' => $key])}}">перейти к {{$key}}</a>
-        <hr>
+        <a class="link" href="{{route('news/list', ['categories' => $key])}}">перейти к {{$key}}</a>
     @endforeach
-</body>
-
-</html>
+@endsection

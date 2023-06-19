@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('news/main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@section('title')
+    @parent NewesSite
+@endsection
 
-<body>
+@section('content')
     <h1>Новости из раздела <?= $newsList[0]['category'] ?> </h1>
 
     <!-- <?php
@@ -20,14 +16,10 @@
 
     @foreach ($newsList as $key => $value)
     <h1>{{$value['header']}}</h1>
+    <div>Категория: {{$value['category']}}</div>
     <div>Автор новости: {{$value['autor']}}</div>
     <div>{{$value['txt']}}</div>
-    <a href="/categories">Открыть новость(не успел доделать)</a>
+    <a class="link" href="#">Открыть новость(не успел доделать)</a>
     <hr>
     @endforeach
-
-    <a href="{{route('categories.list')}}">Вернуться к категориям</a>
-
-</body>
-
-</html>
+@endsection

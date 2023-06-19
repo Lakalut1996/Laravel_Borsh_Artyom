@@ -90,7 +90,7 @@ class Controller extends BaseController
                 break;
 
             default:
-                $filtr[] = 'Такой категории не нашлось';
+                return ($news);
                 break;
         }
 

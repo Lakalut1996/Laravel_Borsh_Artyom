@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
+    public function test(Request $request): View
+    {
+        dd($request->all());
+        return view('test');
+    }
+
     public function index()
     {
         //dd($this->getNews()); //Сокращенно от dump но завершает работу
